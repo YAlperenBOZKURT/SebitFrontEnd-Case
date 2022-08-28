@@ -46,6 +46,7 @@
 => Buradan Yeni Post ekle ile dialog açılır ve başlık içerik ve kategorileri doldurduğunuzda JSON servere kaydolur, arama yaptığınızda veya postu attığınız kategoriye gderseniz postunuzun basıldığını görürsünüz.<br/>
 => Logout ile çıkış yaparsanız, üyelik bilgilerinizi LocalStorage'dan siler ve Anasayfaya yönlendirir.<br/>
 <br/>
-=> Bu siteyi yaparken Angular material ve boostrap gibi özellikleri kullanarak yaptım.
-
+=> Bu siteyi yaparken Angular material ve boostrap gibi özellikleri kullanarak yaptım.<br/>
+=> Aşağıdaki linkten özellikleri gösteren videoma ulaşabilirsiniz : <br/>
+https://www.youtube.com/watch?v=vHHgBMAdYqE 
  
