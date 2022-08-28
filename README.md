@@ -1,6 +1,6 @@
 # Case
 
-## Dosyayı Vscode'da açtığınız da Terminale sırasıyla şu işlemleri uygulayınız.
+## Dosyayı Vscode'da açtığınız da Terminale sırasıyla şu işlemleri uygulayınız. <br/>
 1 => npm install
 2 => ng serve
 3 => json-server --watch api/db.json
