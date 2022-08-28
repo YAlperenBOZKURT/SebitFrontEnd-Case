@@ -41,7 +41,8 @@ Sonrasında localhost:4200 ile siteye ulaşabilirsiniz.<br/>
 => Üyelik giriş yaptığınızda yukarıdaki login butonu gider ve Logout ve My Post butonları gelir.<br/>
 => My post'a tıklarsanız sizin üyeliğinize ait postları LocalStorage sayesinde JSON serverinden çağırarak postlarım sayfasına basılır.<br/>
 => Buradan bütün postlarınızı görebilirsiniz ve bunları silebilirsiniz.<br/>
-=> Buradan Yeni Post ekle ile dialog açılır ve başlık içerik ve kategorileri doldurduğunuzda JSON servere kaydolur, arama yaptığınızda veya postu attığınız kategoriye gderseniz postunuzun basıldığını görürsünüz.<br/>
+=> Buradan Yeni Post ekle ile dialog açılır ve başlık içerik ve kategorileri doldurduğunuzda JSON servere kaydolur, arama yaptığınızda veya postu attığınız kategoriye giderseniz postunuzun basıldığını görürsünüz.<br/>
+=> Attığınız postun yazar ismini  LocalStorageda kayıtlı olduğunuz üyelikten alır, tarihi ise attığınız anki güncel saati kaydeder.
 => Logout ile çıkış yaparsanız, üyelik bilgilerinizi LocalStorage'dan siler ve Anasayfaya yönlendirir.<br/>
 
 => Bu siteyi yaparken Angular material ve boostrap gibi özellikleri kullanarak yaptım.<br/>
