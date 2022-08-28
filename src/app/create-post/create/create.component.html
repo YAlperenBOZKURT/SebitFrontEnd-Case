@@ -1,0 +1,26 @@
+<div class="container">
+        <mat-form-field>
+          <mat-label >Title</mat-label>
+          <input [(ngModel)]="title" matInput>
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Description</mat-label>
+          <textarea [(ngModel)]="description"  matInput></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose an option</mat-label>
+          <select matNativeControl [(ngModel)]="category" >
+            <option value="" selected disabled></option>
+            <option value="1">Getting Started</option>
+            <option value="2" >User Account</option>
+            <option value="3">Product Features</option>
+            <option value="4">Customization Options</option>
+            <option value="5">Payment Gateways</option>
+            <option value="6">Security Options</option>
+            <option value="7">Digital Downloads</option>
+            <option value="8">Email Marketing</option>
+          </select>
+        </mat-form-field>
+      <button  mat-raised-button [disabled]="(description == '') || (title == '') || (category == '')" (click)="createPost ()" color="primary">Create a Post</button>
+      <button  mat-raised-button (click)="close()" color="warn">Close</button>
+</div>

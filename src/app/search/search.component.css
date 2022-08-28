@@ -1,0 +1,59 @@
+.container {
+  width: 1020px;
+}
+
+#firstDiv {
+  display: flex;
+   flex-direction: column;
+   margin-top: 40px;
+}
+
+#firstDiv p {
+  margin-right: 5px;
+}
+
+#firstDiv h1 {
+  margin-top: 20px;
+}
+
+#secondDiv {
+  margin-top: 5px;
+}
+
+mat-card-title {
+  color: #583ABC ;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+span {
+  background-color: #8b70e3;
+  color:white;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+#thirdDiv {
+  margin-top: 15px;
+}
+#p{
+  margin-bottom: 5px;
+}
+#imgDiv {
+  width: 5%;
+  margin-top: 5px;
+}
+
+#imgDiv img {
+  border-radius: 50%;
+  width: 75%;
+  margin: 0px;
+}
+
+#secondDiv p {
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+h1 {
+  font-weight: 401 !important;
+ }
