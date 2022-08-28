@@ -1,0 +1,24 @@
+<div id='mainDiv'>
+  <div id="btnDiv">
+    <div id='btnDiv2'>
+      <button  routerLink="/create-post" *ngIf="loginService.user != undefined"  mat-raised-button color="primary">My Posts</button>
+    </div>
+    <div>
+      <button *ngIf="loginService.user != undefined" (click)="logout()" mat-raised-button color="warn">Logout</button>
+      <button [disabled]="loginService.user != undefined" routerLink="/login" mat-raised-button color="primary">Login</button >
+    </div>
+  </div>
+  <div id="div">
+    <h1>How can we help you ?</h1>
+  </div>
+  <div id="divİnput"  class="row  d-flex justify-content-center ">
+    <div class="col-lg-12">
+      <div class="container search">
+        <i  class="fa fa-search"><mat-icon>search</mat-icon></i>
+        <input [(ngModel)]="enteredSearchValue" (keyup.enter)="onSearchTextChanged()"  type="text" class="form-control" placeholder="Search for answers">
+      </div>
+    </div>
+  </div>
+</div>
+
+

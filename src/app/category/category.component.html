@@ -1,0 +1,36 @@
+
+<div id="linkDiv" class="container">
+  <p style="margin-right: 5px;"><a routerLink="/home">Home Page</a></p>  <p> / {{categoryObj.name}} </p>
+</div>
+
+<div class="container"  >
+  <div  class="d-flex" >
+    <div id="imgDiv" >
+      <img id="img"   mat-card-image src="assets/icons/{{categoryObj.icon}}" >
+    </div>
+     <div id="titleDiv">
+      <mat-card-title >{{categoryObj.name}} ({{size}})  </mat-card-title>
+      <p class="mt-1">{{categoryObj.description}}</p>
+     </div>
+  </div>
+
+</div>
+
+<div id="secondDiv" class="container" *ngFor="let item of postObj | sort:['date']" >
+  <mat-card>
+    <mat-card-title [routerLink]="'/post/'+item.id" >{{item.title}}</mat-card-title>
+    <p class="mt-1">{{item.description | slice:0:280}} ... <span [routerLink]="'/post/'+item.id">read more</span></p>
+    <div class="d-flex" >
+      <div id="imgDiv2" >
+        <img id="img"   mat-card-image src="assets/images/profile.png" >
+      </div>
+   <div id="despDiv2" >
+    <p id="p" >Written by <b>{{item.author}}</b></p>
+    <p >{{item.date | date : 'longDate'}} </p>
+   </div>
+    </div>
+  </mat-card>
+
+
+
+</div>

@@ -1,0 +1,75 @@
+<div id="formDiv" class="d-flex justify-content-center align-items-center col-lg-12 col-md-12 " >
+  <mat-card class="example-card col-md-6" >
+    <mat-card-header class="d-flex justify-content-center" >
+      <mat-card-title>Kayıt Ol</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="d-flex flex-column" [formGroup]="registerForm">
+
+        <div class="row">
+          <mat-form-field class="col-lg-6" appearance="outline" >
+            <mat-label>First Name</mat-label>
+            <input [(ngModel)]="obj.firstname" matInput placeholder="Enter your Firstname" formControlName="firstName">
+            <mat-error *ngIf="registerForm.get('firstName')?.hasError('required')">
+              You have to enter First Name
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-lg-6" appearance="outline" >
+            <mat-label>Last Name</mat-label>
+            <input [(ngModel)]="obj.lastname" matInput placeholder="Enter your Lastname" formControlName="lastName">
+            <mat-error *ngIf="registerForm.get('lastName')?.hasError('required')">
+              You have to enter Last Name
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline" >
+          <mat-label>Email</mat-label>
+          <input [(ngModel)]="obj.email" matInput placeholder="Enter your Email" formControlName="email">
+          <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
+            You have to enter e-mail
+          </mat-error>
+          <mat-error *ngIf="registerForm.get('email')?.hasError('email')">
+            Please enter in correct format
+          </mat-error>
+        </mat-form-field>
+        <div class="row">
+          <mat-form-field class="col-lg-6" appearance="outline" >
+            <mat-label>Password</mat-label>
+            <input [(ngModel)]="obj.password" type="password" matInput placeholder="Enter your Password" formControlName="password">
+            <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
+              You have to enter password
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('password')?.hasError('minlength')">
+              Minimum 8 characters
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="col-lg-6" appearance="outline" >
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Enter your Password" formControlName="repassword">
+            <mat-error *ngIf="registerForm.get('repassword')?.hasError('required')">
+              You have to enter password
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('repassword')?.hasError('minlength')">
+              Minimum 8 characters
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('repassword')?.hasError('not_the_same')">
+              NOT same
+            </mat-error>
+          </mat-form-field>
+
+        </div>
+
+        <mat-form-field appearance="outline" >
+          <mat-label>Phone</mat-label>
+          <input [(ngModel)]="obj.phone" matInput placeholder="Enter your Phone Number" formControlName="phone">
+          <mat-error *ngIf="registerForm.get('phone')?.hasError('required')">
+            You have to enter Phone
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button (click)="createAccount()" [disabled]="registerForm.invalid" class="col-md-2" color="primary">Sign Up</button>
+      </form>
+      <a  class="col-md-2" routerLink="/login">Login</a>
+    </mat-card-content>
+  </mat-card>
+</div>

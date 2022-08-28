@@ -1,52 +1,27 @@
 # Case
 
-## Dosyayı Vscode'da açtığınız da Terminale sırasıyla şu işlemleri uygulayınız. 
-1 => npm install<br/>
-2 => ng serve<br/>
-3 => json-server --watch api/db.json<br/>
- Sonrasında localhost:4200 ile siteye ulaşabilirsiniz.<br/>
- 
-#Anasayfa<br/>
-=> Json serverimizden çektiğimiz kategorilerin "başlık, içerik ve iconu çekilerek yazdırıldı.<br/>
-=> Kategorilerden birine tıklarsanız o kategorideki postların olduğu sayfaya yönelinirsiniz.<br/>
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
-##Kategori<br/>
-=> Kategoriye ait postları kendi yaptığum custom pipe ile tarihe göre yakında uzağa şekilde sıraladım.<br/>
-=> En üste o kategoriye ait bilgileri çekerek yazdırdım, Kategori başlığının yanında parantez içersinde de o kategoriye ait kaç tane post olduğunu bastırdım.<br/>
-=> Postları istenilen formatta bastırdım.<br/>
-=> Postların içerikleri maksimum 280 karakter içeriyor, postun tamamnına erişmek için başlık veya read me'ye tıklayabilirsiniz.<br/>
+## Development server
 
-##Pos Detay<br/>
-=> Postu istenilen şekilde bastırdım<br/>
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-##Arama Sonuç <br/>
-=> Headerda bulunan arama kutusundan arama yapıldığında, postun başlığında veya açıklamasında arama metninin geçtiği tüm postlar bu sayfada listeleniyor.<br/>
-=> Postları kendi yaptığum custom pipe ile tarihe göre yakında uzağa şekilde sıraladım.<br/>
+## Code scaffolding
 
-#EK KENDİ YAPTIKLARIM <br/>
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-#Giriş Ekranı<br/>
-=> sağ yukarıdaki tuşa basarak login ekranına ulaşabilirsiniz<br/>
-=> Giriş yaparken JSON serverinde üyeliğinizin kayıtlı olması gerekiyor, eğer üye değilseniz snack bar ile birlikte hata verir. Üyesiniz ama şifrenizi yanlış girdiniz
-şifre yanlış hatası verir.<br/>
-=> Kullancı adı ve Şifre JSON serverinde kontrol ediliyor.<br/>
-=> Doğru formatta mail veya 8 karakterden az şifre girince kutucklar hata verir ve giriş yap butonu disable moddan çıkmaz.<br/>
-=> Başarılı giriş yaparsanız anasayfaya yönlendirilirsiniz ve giriş bilgileriniz LocalStorage'e kaydedilir, böylece sitede başka sayfaya gittiğinizde veya yenilediğinizde tekrar giriş yapmak zorunda kalmazsınız.<br/>
+## Build
 
-#Kayıt Ol Ekranı<br/>
-=> Login tuşunun solunda sign up diyerek kayıt ol ekranına ulaşabilirsiniz<br/>
-=> Buradaki bilgileri girerken doğru formatlarda girmezseniz hata verir ve kayıt ol butonu disable moddan çıkmaz.<br/>
-=> Kayıt olurken kulladığınız mail JSON serverinde kontrol edilir, eğer böyle bir mail yoksa kayıt olabilirsiniz yoksa hata alırsınız.<br/>
-=> Başarılı giriş yapınca giriş yap sayfasına yönlendirilirsiniz<br/>
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-#Üyelik girişinden sonra<br/>
-=> Üyelik giriş yaptığınızda yukarıdaki login butonu gider ve  Logout ve My Post butonları gelir.<br/>
-=> My post'a tıklarsanız sizin üyeliğinize ait postları LocalStorage sayesinde JSON serverinden çağırarak postlarım sayfasına basılır.<br/>
-=> Buradan bütün postlarınızı görebilirsiniz ve bunları silebilirsiniz.<br/>
-=> Buradan Yeni Post ekle ile dialog açılır ve başlık içerik ve kategorileri doldurduğunuzda JSON servere kaydolur, arama yaptığınızda veya postu attığınız kategoriye gderseniz postunuzun basıldığını görürsünüz.<br/>
-=> Logout ile çıkış yaparsanız, üyelik bilgilerinizi LocalStorage'dan siler ve Anasayfaya yönlendirir.<br/>
-<br/>
-=> Bu siteyi yaparken Angular material ve boostrap gibi özellikleri kullanarak yaptım.<br/>
-=> Aşağıdaki linkten özellikleri gösteren videoma ulaşabilirsiniz : <br/>
-https://www.youtube.com/watch?v=vHHgBMAdYqE 
- 
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
