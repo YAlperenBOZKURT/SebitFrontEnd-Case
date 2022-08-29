@@ -37,7 +37,7 @@ Sonrasında localhost:4200 ile siteye ulaşabilirsiniz.<br/>
 => Kayıt olurken kulladığınız mail JSON serverinde kontrol edilir, eğer böyle bir mail yoksa kayıt olabilirsiniz yoksa hata alırsınız.<br/>
 => Başarılı giriş yapınca giriş yap sayfasına yönlendirilirsiniz<br/>
 
-# Üyelik girişinden sonra
+# Üyelik girişinden sonra - My Post Sayfası
 => Üyelik giriş yaptığınızda yukarıdaki login butonu gider ve Logout ve My Post butonları gelir.<br/>
 => My post'a tıklarsanız sizin üyeliğinize ait postları LocalStorage sayesinde JSON serverinden çağırarak postlarım sayfasına basılır.<br/>
 => Buradan bütün postlarınızı görebilirsiniz ve bunları silebilirsiniz.<br/>
