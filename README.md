@@ -1,50 +1,66 @@
-# Case
-## Dosyayı Vscode'da açtığınız da Terminale sırasıyla şu işlemleri uygulayınız.
-1 => npm install <br/>
-2 => ng serve<br/>
-3 => json-server --watch api/db.json<br/>
-Sonrasında localhost:4200 ile siteye ulaşabilirsiniz.<br/>
 
-## Anasayfa
-=> Json serverimizden çektiğimiz kategorilerin "başlık, içerik ve iconu çekilerek" yazdırıldı.<br/>
-=> Kategorilerden birine tıklarsanız o kategorideki postların olduğu sayfaya yönelinirsiniz.<br/>
+## Getting Started
 
-## Kategori
-=> Kategoriye ait postları kendi yaptığum custom pipe ile tarihe göre yakında uzağa şekilde sıraladım.<br/>
-=> En üste o kategoriye ait bilgileri çekerek yazdırdım, Kategori başlığının yanında parantez içersinde de o kategoriye ait kaç tane post olduğunu bastırdım.<br/>
-=> Postları talimatlardaki istenilen formatta bastırdım.<br/>
-=> Postların içerikleri maksimum 280 karakter içeriyor, postun tamamına erişmek için başlık veya read me'ye tıklayabilirsiniz.<br/>
+To run the project on your local machine, follow the steps below.
 
-## Post Detay
-=> Postları talimatlarda istenilen şekilde bastırdım<br/>
+### Step 1: Installing Required Packages
+Open the terminal and navigate to the project folder. Then, use the following command to install the necessary packages:
+```bash
+npm install
+```
 
-## Arama Sonuç
-=> Headerda bulunan arama kutusundan arama yapıldığında, postun başlığında veya açıklamasında arama metninin geçtiği tüm postlar bu sayfada listeleniyor.<br/>
-=> Bu postların tamamına erişmek için başlık veya read me'ye tıklayarak gidebilirsiniz.<br/>
-=> Postları kendi yaptığım custom pipe ile tarihe göre yakında uzağa şekilde sıraladım.<br/>
+### Step 2: Starting the Application
+Use the following command to start the application:
+```bash
+ng serve
+```
 
-# EK KENDİ YAPTIKLARIM
+### Step 3: Starting the JSON Server
+To start the JSON Server, use the following command:
+```bash
+json-server --watch api/db.json
+```
 
-# Giriş Ekranı
-=> Sağ yukarıdaki tuşa basarak login ekranına ulaşabilirsiniz<br/>
-=> Giriş yaparken JSON serverinde üyeliğinizin kayıtlı olması gerekiyor, eğer üye değilseniz snack bar ile birlikte hata verir. Üyesiniz ama şifrenizi yanlış girdiniz şifre yanlış hatası verir.<br/>
-=> Doğru formatta mail veya 8 karakterden az şifre girince kutucklar hata verir ve giriş yap butonu disable moddan çıkmaz.<br/>
-=> Başarılı giriş yaparsanız anasayfaya yönlendirilirsiniz ve giriş bilgileriniz LocalStorage'e kaydedilir, böylece sitede başka sayfaya gittiğinizde veya yenilediğinizde tekrar giriş yapmak zorunda kalmazsınız.<br/>
+After completing these steps, open your browser and navigate to `localhost:4200` to access the application.
 
-# Kayıt Ol Ekranı
-=> Login tuşunun solunda sign up diyerek kayıt ol ekranına ulaşabilirsiniz<br/>
-=> Buradaki bilgileri girerken doğru formatlarda girmezseniz hata verir ve kayıt ol butonu disable moddan çıkmaz.<br/>
-=> Kayıt olurken kulladığınız mail JSON serverinde kontrol edilir, eğer böyle bir mail yoksa kayıt olabilirsiniz yoksa hata alırsınız.<br/>
-=> Başarılı giriş yapınca giriş yap sayfasına yönlendirilirsiniz<br/>
+---
 
-# Üyelik girişinden sonra - My Post Sayfası
-=> Üyelik giriş yaptığınızda yukarıdaki login butonu gider ve Logout ve My Post butonları gelir.<br/>
-=> My post'a tıklarsanız sizin üyeliğinize ait postları LocalStorage sayesinde JSON serverinden çağırarak postlarım sayfasına basılır.<br/>
-=> Buradan bütün postlarınızı görebilirsiniz ve bunları silebilirsiniz.<br/>
-=> Buradan Yeni Post ekle ile dialog açılır ve başlık, içerik ve kategorileri doldurduğunuzda JSON servere kaydolur, arama yaptığınızda veya postu attığınız kategoriye giderseniz postunuzun basıldığını görürsünüz.<br/>
-=> Attığınız postun yazar ismini  LocalStorageda kayıtlı olduğunuz üyelikten alır, tarihi ise attığınız anki güncel saati kaydeder.<br/>
-=> Logout ile çıkış yaparsanız, üyelik bilgilerinizi LocalStorage'dan siler ve Anasayfaya yönlendirir.<br/>
+## Homepage
 
-=> Bu siteyi yaparken Angular Material ve Boostrap Css Frameworklerini kullanarak yaptım.<br/>
-=> Aşağıdaki linkten özellikleri gösteren kısa videoma ulaşabilirsiniz :<br/>
-https://www.youtube.com/watch?v=vHHgBMAdYqE
+On the application's homepage, category titles, contents, and icons are listed, pulled from the JSON Server. Clicking on a category redirects you to a page displaying articles belonging to that category.
+
+---
+
+## Category
+
+On the category page, articles belonging to the selected category are sorted using a custom sorting method based on their publication dates. The top of the page displays category information along with the number of articles in that category. Articles are listed in the desired format, containing a maximum of 280 characters. To view the full article, click on the title or the "Read More" link.
+
+---
+
+## Article Detail
+
+The article detail page presents the article's title, content, and publication date in the desired format.
+
+---
+
+## Search Results
+
+When searching for text that appears in the title or description, all articles containing that text are listed on this page. Click on the article title or the "Read More" link to access the full content. Additionally, search results are sorted by date, displaying the most recent articles first.
+
+---
+
+## Additional Features
+
+During the development of the application, the following additional features have been implemented:
+
+- **Login Screen:** Access the login screen by clicking on the top-right button. When logging in, error messages are displayed if the correct format for the email and password is not followed. After a successful login, the information is stored in the local storage, allowing you to continue browsing without having to log in again.
+
+- **Sign Up Screen:** Access the sign-up screen through the "Sign Up" option on the login screen. Error messages are displayed if the data is not entered in the correct format. The entered email address is checked against the database, and if it already exists, the registration process is blocked.
+
+- **After User Login - My Post Page:** After logging in, the login button disappears, and the "Logout" and "My Post" buttons appear. Clicking on the "My Post" button displays articles associated with the user's membership using local storage. The "Add New Post" button can be used to create a new article.
+
+---
+
+This project was developed using Angular Material and Bootstrap CSS Frameworks. You can watch a short video showcasing the features by following this link: [Video Link](https://www.youtube.com/watch?v=vHHgBMAdYqE)
+
+---
